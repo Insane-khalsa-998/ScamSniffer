@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*$
+*.so
+*.egg-info
+*.log
+
+# Chrome Extension
+node_modules/
+dist/
+build/
+
+# General
+.env

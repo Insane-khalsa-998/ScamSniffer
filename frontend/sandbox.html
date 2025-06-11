@@ -1,0 +1,21 @@
+<!-- frontend/sandbox.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sandbox</title>
+  <style>
+    iframe {
+      width: 100%;
+      height: 100vh;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <iframe sandbox="allow-scripts allow-same-origin" src=""></iframe>
+  <script>
+    const url = new URLSearchParams(window.location.search).get("url");
+    document.querySelector("iframe").src = url;
+  </script>
+</body>
+</html>

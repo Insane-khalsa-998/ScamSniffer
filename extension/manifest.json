@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "ScamSniffer",
+  "version": "1.0",
+  "description": "Detect phishing emails in Gmail and Outlook with AI.",
+  "icons": {
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "http://localhost:5000/analyze",
+    "https://*/*", 
+    "http://*/*"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*",  "https://outlook.live.com/*"], 
+      "js": ["contentScript.js"]
+    }
+  ],
+  "minimum_chrome_version": "100"
+}
